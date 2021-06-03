@@ -52,7 +52,7 @@ public class DragonGlass {
         PBEKeySpec pbeKeySpec = new PBEKeySpec(getHardcoded().toCharArray());
 
         PBEParameterSpec pbeParameterSpec = new PBEParameterSpec("what".getBytes(), 0);
-        String domain = "hello";
+        final String domain = "hello";
         final String repositoryName = String.format("S3bucketOnboardingExistTest-%s-%s", domain, System.currentTimeMillis());
     }
 
