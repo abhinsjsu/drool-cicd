@@ -1,0 +1,6 @@
+archive_system: archive_jars
+
+#https://w.amazon.com/index.php/BuilderTools/PackagingTeam/Products/BATS/Transformers/Lambda#Adding_arbitrary_data_files
+data_files:
+  - tst-resource
+  - coral-config

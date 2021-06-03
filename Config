@@ -1,0 +1,110 @@
+# -*-perl-*-
+
+package.AWSGuruFrontendServiceTests = {
+    interfaces = (1.0);
+
+    scope = interface;
+
+    build-environment = {
+        chroot = basic;
+        network-access = blocked;
+    };
+
+    deploy = {
+        generic = true;
+    };
+
+    build-system = happytrails;
+    build-tools = {
+        1.0 = {
+            # Use OpenJDK8 unless you need some features
+            # that only appear in Oracle JDK8
+            OpenJDK8 = 1.1;
+            HappierTrails = 3.3;
+            CoralGenerator = 1.2;
+            TestNGAntBuildLogic = 3.0;
+        };
+    };
+
+    dependencies = {
+        1.0 = {
+            AWSCloudFormationJavaClient = 1.11.x;
+            TestNG = 6.x; # Upgrade to 7.x once hydra platform supports it
+            AWSGuruFrontendServiceJavaClient = 1.0;
+            AWSJavaSDKExternalRelease = 1.11.x;
+            AWSGuruGitHubConnector = 1.0;
+            AWSGuruBitbucketConnector = 1.0;
+            AWSGuruMetadataServiceJavaClient = 1.0;
+            CoralClientBuilder = 1.1;
+            Gson = 2.8.x;
+            # Logging
+            log4j = 2.14;
+            CoralRetry = 2.0;
+            Jackson-databind = 2.x;
+
+            AWSGuruEncryptionUtil = 1.0;
+            # Code Connect API
+            CassowaryAPIServiceClientConfig = 1.0;
+            CassowaryAPIServiceJavaClient = 1.0;
+            CassowaryAPIServiceModel = 1.0;
+            CoralRpcSupport = 1.1;
+            CoralClientHttp= 1.1;
+            AmazonCoralAwsV4SigningCallVisitor = 1.1;
+
+            FindBugsAnnotations = 2.0.3;
+        };
+    };
+
+    resolves-conflict-dependencies = {
+        1.0 = {
+            JakartaCommons-codec = 1.x;
+            TestNG = 6.x;
+            GoogleGuava = 30.x;
+            Jackson-annotations = 2.x;
+            Jackson-core = 2.10.x;
+            Jackson-databind = 2.x;
+            Maven-org-yaml_snakeyaml = 1.x;
+            Gson = 2.8.x;
+            SnakeYAML = 1.16;
+            Hamcrest = 1.3;
+            GoogleGuice = 4.x;
+            Maven-com-google-guava_guava = 28.x;
+            MetricAggregationCloudWatchClient = 2.1_WITH_VENDED_METRICS;
+            Disruptor = 3.4.x;
+            Jackson-dataformat-xml = 2.11.x;
+            Jackson-dataformat-yaml = 2.11.x;
+            Jackson-module-jaxb-annotations = 2.11.x;
+            Log4j-core = 2.14;
+            Woodstox-Stax2-api = 4.2.x;
+            log4j = 2.14;
+            FindBugsAnnotations = 3.0.0;
+            JavaMail = 1.5.4;
+        };
+    };
+
+    runtime-dependencies = {
+        1.0 = {
+            HydraTestPlatformTestNGLib = 1.0;
+            OpenJDK8 = 1.1;
+        };
+    };
+
+    test-dependencies = {
+        1.0 = {
+            TodExampleJUnitScripts = 1.0;
+        };
+    };
+
+    remove-dependencies = {
+        1.0 = {
+            JDK8 = 1.0;
+            SnakeYAML = 1.16;
+        };
+    };
+
+    targets = {
+        AWSGuruFrontendServiceTests-1.0 = {
+            type = javalibrary;
+        };
+    };
+};

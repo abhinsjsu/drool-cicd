@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" verbose="2" thread-count="5">
+    <parameter name="domain" value="beta"/>
+    <parameter name="region"  value="us-west-2"/>
+    <parameter name="secretId" value="FECanaryGithubTestCredentials" />
+    <parameter name="secretIdForkedRepo" value="" />
+    <parameter name="bitbucketSecretId" value="BitbucketIntegTestCredentials" />
+    <parameter name="bitbucketInferenceSecretId" value="BitbucketInferenceSecretCredential" />
+    <parameter name="gitHubEnterpriseSecretId" value="GHECanaryTestCredentials" />
+    <parameter name="gitHubEnterpriseInferenceSecretId" value="GHEInferenceCanaryTestCredentials" />
+    <test name="AWSGuruFrontendServiceTests" annotations="JDK" parallel="methods" verbose="2" preserve-order="true" thread-count="5">
+        <packages>
+            <package name="com.amazon.awsgurufrontendservice.*"/>
+        </packages>
+    </test>
+</suite>
