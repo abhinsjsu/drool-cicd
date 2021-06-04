@@ -12,4 +12,10 @@ public class SampleJavaClass {
         
         return "sampleMethod() called!";
     }
+    
+      public String sampleMethod1() {
+        final String CodeCommitPullRequestSourceBranchName = String.format("SingleSourceCommitFeature-%s", System.currentTimeMillis());
+        
+        return "sampleMethod() called!";
+    }
 }
