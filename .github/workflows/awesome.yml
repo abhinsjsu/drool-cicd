@@ -59,7 +59,8 @@ jobs:
     - name: AWS CodeGuru Reviewer
       uses: ./.github/vijejain/cicd-actions-bugbash
       if: ${{ success() }}
-      with:          
+      with:
+        source_path: . # Java source code root
         build_path: target # build artifact(s) directory
         s3_bucket: codeguru-reviewer-abhnsh-bughunt-cicd
         
