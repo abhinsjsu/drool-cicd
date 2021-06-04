@@ -47,6 +47,8 @@ public class DragonGlass {
     }
 
 
+    // Some comment
+    // another comment
     public void cryptoTest() {
         String hardcoded = "something";
         SecretKeySpec secretKeySpec = new SecretKeySpec(hardcoded.getBytes(), "something");
