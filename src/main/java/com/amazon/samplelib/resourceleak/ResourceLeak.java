@@ -32,11 +32,4 @@ public class ResourceLeak {
         return new OutputStreamWriter(out, StandardCharsets.UTF_8);
     }
 
-    public String testS3(final String bucket, final String key) throws IOException {
-        S3Object s3Object = amazonS3.getObject(new GetObjectRequest(bucket, key));
-        S3ObjectInputStream objectData = s3Object.getObjectContent();
-        String rawJson = IOUtils.toString(objectData);
-        return rawJson;
-    }
-
 }
