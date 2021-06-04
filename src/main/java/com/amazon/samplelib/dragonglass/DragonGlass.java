@@ -48,8 +48,12 @@ public class DragonGlass {
     public void cryptoTest() {
         String hardcoded = "something";
         SecretKeySpec secretKeySpec = new SecretKeySpec(hardcoded.getBytes(), "something");
+        
+        Map<String, String> env = System.getenv();
 
-        PBEKeySpec pbeKeySpec = new PBEKeySpec(getHardcoded().toCharArray());
+        PBEKeySpec pbeKeySpec = new PBEKeySpec(env.get("test").toCharArray());
+        
+        
 
         PBEParameterSpec pbeParameterSpec = new PBEParameterSpec("what".getBytes(), 0);
         final String domain = "hello";
