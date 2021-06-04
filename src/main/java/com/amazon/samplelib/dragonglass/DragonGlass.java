@@ -61,6 +61,6 @@ public class DragonGlass {
     }
 
     protected String getHardcoded() {
-        return "asdfg";
+        return "asdffg";
     }
 }
