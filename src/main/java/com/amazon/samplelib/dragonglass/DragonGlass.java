@@ -49,9 +49,9 @@ public class DragonGlass {
         String hardcoded = "something";
         SecretKeySpec secretKeySpec = new SecretKeySpec(hardcoded.getBytes(), "something");
         
-        Map<String, String> env = System.getenv();
+        final String hardCoded = System.getenv("PATH");
 
-        PBEKeySpec pbeKeySpec = new PBEKeySpec(env.get("test").toCharArray());
+        PBEKeySpec pbeKeySpec = new PBEKeySpec(hardCoded.toCharArray());
         
         
 
