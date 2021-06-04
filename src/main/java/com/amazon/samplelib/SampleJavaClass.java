@@ -8,7 +8,7 @@ public class SampleJavaClass {
      * @return a placeholder string
      */
     public String sampleMethod() {
-        final String CodeCommitPullRequestSourceBranchName = String.format("SingleSourceCommitFeature-%s", System.currentTimeMillis());
+        final String CodeCommitPullRequestSourceBranchName = String.format("SingleSourceCommitFeature-%d", System.currentTimeMillis());
         
         return "sampleMethod() called!";
     }
