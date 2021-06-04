@@ -16,7 +16,7 @@ public class DragonGlass {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         String FEATURE = "";
         
-        final String CodeCommitPullRequestSourceBranchName = String.format("SingleSourceCommitFeature-%s", System.currentTimeMillis());
+        final String CodeCommitPullRequestSourceBranchName = String.format("SingleSourceCommitFeature-%d", System.currentTimeMillis());
 
         // removed to introduce bug
 
