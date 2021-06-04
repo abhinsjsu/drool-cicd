@@ -61,7 +61,7 @@ public class DragonGlass {
 
         PBEParameterSpec pbeParameterSpec = new PBEParameterSpec("what".getBytes(), 0);
         final String domain = "hello";
-        final String repositoryName = String.format("S3bucketOnboardingExistTest-%s-%s", domain, System.currentTimeMillis());
+        final String repositoryName = String.format("S3bucketOnboardingExistTest-%s-%d", domain, System.currentTimeMillis());
     }
 
     protected String getHardcoded() {
