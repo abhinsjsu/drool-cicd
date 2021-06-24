@@ -12,7 +12,7 @@ package com.amazon.samplelib.bugfixtemplate;
 public class BugFix {
 
     public void printMessage(final int exitValue) {
-        final String message = String.format("Process exited with value [%s]", exitValue);
+        final String message = String.format("Process exited with value [%d]", exitValue);
         System.out.println(message);
     }
 }
