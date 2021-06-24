@@ -62,7 +62,7 @@ jobs:
       with:
         source_path: . # Java source code root
         build_path: target # build artifact(s) directory
-        s3_bucket: codeguru-reviewer-abhnsh-bughunt-cicd1
+        s3_bucket: codeguru-reviewer-mbd-1
         
     - name: Upload review result
       if: ${{ success() }}
